@@ -92,6 +92,19 @@ a:hover {
 	color: #424242;
 	vertical-align: middle;
 }
+form {
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #262626;
+}
+input {
+	background-color: transparent;
+	border: none;
+}
 @media only screen and (min-width: 980px) {
 	html {
 		font-size: 125%;
