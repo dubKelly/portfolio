@@ -18,11 +18,11 @@
 	</div>
 	<div id="nav">
 		<ul>
-			<li><a href="#about">About</a></li>
+			<li><a href="#about" tabindex="-1">About</a></li>
 			<li class="slash">/</li>
-			<li><a href="#work">Work</a></li>
+			<li><a href="#work" tabindex="-1">Work</a></li>
 			<li class="slash">/</li>
-			<li><a href="#contact">Contact</a></li>
+			<li><a id="cLink" href="#contact" tabindex="-1">Contact</a></li>
 		</ul>
 	</div>
 </section>
@@ -38,11 +38,11 @@
 			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			<div id="aboutNav">
 				<ul>
-					<li><a href="#about">About</a></li>
+					<li><a href="#about" tabindex="-1">About</a></li>
 					<li class="slash">/</li>
-					<li><a href="#work">Work</a></li>
+					<li><a href="#work" tabindex="-1">Work</a></li>
 					<li class="slash">/</li>
-					<li><a href="#contact">Contact</a></li>
+					<li><a href="#contact" tabindex="-1">Contact</a></li>
 				</ul>
 			</div>
 		</div>
@@ -50,11 +50,13 @@
 </section>
 <section id="contact">
 	<form>
-		<input id="message" type="text" name="message" placeholder="Message"><br>
-		<input id="userName" type="text" name="name" placeholder="Name"><br>
-		<input id="phone" type="text" name="phone" placeholder="Phone (optional)"><br>
-		<input id="email" type="text" name="email" placeholder="Email">
+		<input id="userName" type="text" name="name" placeholder="Your Name" tabindex="1">
+		<input id="phone" type="text" name="phone" placeholder="Phone #" tabindex="2">
+		<input id="ext" type="text" name="ext" placeholder="Ext." tabindex="3">
+		<input id="email" type="text" name="email" placeholder="Email" tabindex="4">
+		<textarea id="message" type="text" name="message" placeholder="Message" tabindex="5"></textarea>
 	</form>
 </section>
+<script type="text/javascript" src="scripts/next.js"></script>
 </body>
 </html>
