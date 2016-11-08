@@ -154,6 +154,17 @@ input:focus, textarea:focus {
 	resize: none;
 	overflow: auto;
 }
+#prev {
+	height: 100%;
+	width: 100%;
+	padding: 5%;
+	display: none;
+}
+#preview {
+	font-family: "Ubuntu", sans-serif;
+	font-size: 1.2rem;
+	color: #262626;
+}
 @media only screen and (min-width: 980px) {
 	html {
 		font-size: 125%;
