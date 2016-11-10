@@ -53,16 +53,14 @@ message.onkeydown = function() {
 message.onkeyup = function() {
 	message.style.height = (message.scrollHeight) - 4 + "px";
 }
-var cLink = document.getElementsByClassName("cLink");
-for (var i = 0; i < cLink.length; i++) {
-	cLink[i].onclick = function(event) {
+window.onscroll = function() {
+	var vh = window.innerHeight;
+	if ((window.pageYOffset) >= (vh * 2)) {
 		if (next === 4) {
 			message.focus();
-			event.preventDefault();
 		}
 		else {
 			input[next].focus();
-			event.preventDefault();
 		}
 	}
 }
