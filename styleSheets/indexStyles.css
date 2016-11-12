@@ -152,6 +152,20 @@ input:focus, textarea:focus {
 	resize: none;
 	overflow: auto;
 }
+#done {
+	font-family: "Ubuntu", sans-serif;
+	font-size: 2rem;
+	position: relative;
+	top: 83%;
+	transform: translateY(-50%, -50%);
+	padding: 0 15% 0 15%;
+	color: #262626;
+	background-color: transparent;
+	border: 2px solid #262626;
+	border-radius: 4px;
+	z-index: 10;
+	display: none;
+}
 #part {
 	position: absolute;
 	width: 100%;

@@ -1,5 +1,6 @@
 var input = document.getElementsByTagName("input");
 var message = document.getElementById("message");
+var done = document.getElementById("done");
 var part = document.getElementById("part");	
 var partIndex = 8;	
 var next = 0;
@@ -49,6 +50,7 @@ message.onkeydown = function() {
 	message.style.maxHeight = "51%";
 	message.style.width = "90%";
 	message.style.textAlign = "center";
+	done.style.display = "inline-block"
 }
 message.onkeyup = function() {
 	message.style.height = (message.scrollHeight) - 4 + "px";
