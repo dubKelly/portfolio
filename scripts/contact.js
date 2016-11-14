@@ -1,8 +1,8 @@
 var input = document.getElementsByTagName("input");
 var message = document.getElementById("message");
 var done = document.getElementById("done");
-var part = document.getElementById("part");	
-var partIndex = 8;	
+var part = document.getElementById("part");
+var partIndex = 8;
 var next = 0;
 for (var i = 0; i < input.length; i++) {
 	input[i].onkeydown = function(event) {
@@ -29,7 +29,7 @@ for (var i = 0; i < input.length; i++) {
 			event.preventDefault();
 			if (next === 3) {
 				next += 1;
-				this.onkeyup = function() {	
+				this.onkeyup = function() {
 					this.style.display = "none";
 					message.focus();
 					message.style.opacity = "1"

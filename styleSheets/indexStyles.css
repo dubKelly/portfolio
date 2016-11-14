@@ -141,7 +141,7 @@ input:focus, textarea:focus {
 #phone {
 	width: 130px;
 	z-index: 7;
-} 
+}
 #ext {
 	width: 65px;
 	z-index: 5;
@@ -209,7 +209,7 @@ input:focus, textarea:focus {
 		height: 100%;
 		position: relative;
 	}
-	.pageTitle h1 {
+	.pageTitle h2 {
 		position: fixed;
 		top: 50%;
 		left: 50%;
