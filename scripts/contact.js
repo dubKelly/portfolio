@@ -26,6 +26,7 @@ for (var i = 0; i < input.length; i++) {
 		}
 		// 	To avoid confusion with non-tab users
 		else if (key === 13) {	
+			event.preventDefault();
 			if (next === 3) {
 				next += 1;
 				this.onkeyup = function() {	
