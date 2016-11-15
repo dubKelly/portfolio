@@ -4,13 +4,42 @@ var done = document.getElementById("done");
 var part = document.getElementById("part");
 var partIndex = 8;
 var next = 0;
+		var elem 
+		var nextElem
 for (var i = 0; i < input.length; i++) {
 	input[i].onkeydown = function(event) {
 		this.style.textAlign = "center";
-		this.style.width = "100%"
-		var key = event.keyCode;
-		if (key === 9) {
-			if (next === 3) {
+		this.style.width = "100%"	
+		var key = event.keyCode;	//
+			elem = this;
+		if (key === 9) {	//
+			next++;
+			nextElem = input[next];
+			partIndex -= 2;
+			func();
+		function func() {
+		var pos = 50;
+		var nextPos = 60;
+		var opCity = 1;
+		var NextOpCity = 0;
+		var int = setInterval(frame, 500);
+		function frame() {
+			if (pos === 40) {
+				clearInterval(int);
+			}
+			else {
+			pos--;
+			nextPos--;
+			opCity = opCity - 0.1;
+			NextOpCity = NextOpCity + 0.1;
+			elem.style.top = pos + "%";
+			elem.style.opacity = opCity;
+			nextElem.style.top = nextPos + "%";
+			nextElem.style.opacity = NextOpCity;
+		}
+			}}
+		}
+			/*if (next === 3) {
 				next += 1;
 				this.style.display = "none";
 				message.style.opacity = "1";
@@ -23,9 +52,9 @@ for (var i = 0; i < input.length; i++) {
 				input[next].style.opacity = "1";
 				part.style.zIndex = partIndex;
 			}
-		}
+		}*/
 		// 	To avoid confusion with non-tab users
-		else if (key === 13) {	
+		if (key === 13) {	
 			event.preventDefault();
 			if (next === 3) {
 				next += 1;
