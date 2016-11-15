@@ -10,10 +10,13 @@ for (var i = 0; i < input.length; i++) {
 		this.style.width = "100%"
 		var key = event.keyCode;	//
 		var elem = this;
-		if (key === 9) {	//
+		if (key === 9 || 13) {
+			event.preventDefault;	//
 			next++;
+			input[next].focus();
 			var nextElem = input[next];
 			partIndex -= 2;
+			part.style.zIndex = partIndex;
 			function func() {
 			var pos = 50;
 			var nextPos = 60;
