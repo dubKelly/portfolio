@@ -8,74 +8,45 @@ for (var i = 0; i < input.length; i++) {
 	input[i].onkeydown = function(event) {
 		this.style.textAlign = "center";
 		this.style.width = "100%"
-		var key = event.keyCode;	//
+		var key = event.keyCode;
 		var elem = this;
-		if (key === 9 || 13) {
-			event.preventDefault;	//
+		if (key === 9 || key === 13) {
+			event.preventDefault();
 			next++;
-			input[next].focus();
-			var nextElem = input[next];
 			partIndex -= 2;
 			part.style.zIndex = partIndex;
+			if (next === 3) {
+				message.focus();
+				var nextElem = message;
+			}
+			else {
+				input[next].focus();
+				nextElem = input[next];
+			}
 			function func() {
-			var pos = 50;
-			var nextPos = 60;
-			var opCity = 1;
-			var NextOpCity = 0;
-			var int = setInterval(frame, 20);
-			function frame() {
-				if (pos === 40) {
-					clearInterval(int);
-				}
-				else {
-				pos--;
-				nextPos--;
-				opCity = opCity - 0.1;
-				NextOpCity = NextOpCity + 0.1;
-				elem.style.top = pos + "%";
-				elem.style.opacity = opCity;
-				nextElem.style.top = nextPos + "%";
-				nextElem.style.opacity = NextOpCity;
+				var pos = 50;
+				var nextPos = 60;
+				var opCity = 1;
+				var NextOpCity = 0;
+				var int = setInterval(frame, 15);
+				function frame() {
+					if (pos === 40) {
+						clearInterval(int);
+					}
+					else {
+					pos--;
+					nextPos--;
+					opCity = opCity - 0.1;
+					NextOpCity = NextOpCity + 0.1;
+					elem.style.top = pos + "%";
+					elem.style.opacity = opCity;
+					nextElem.style.top = nextPos + "%";
+					nextElem.style.opacity = NextOpCity;
+					}
 				}
 			}
 		}
 		func();
-	}
-			/*if (next === 3) {
-				next += 1;
-				this.style.display = "none";
-				message.style.opacity = "1";
-				part.style.display = "none";
-			}
-			else {
-				partIndex -= 2;
-				next += 1;
-				this.style.display = "none";
-				input[next].style.opacity = "1";
-				part.style.zIndex = partIndex;
-			}
-		}*/
-		// 	To avoid confusion with non-tab users
-		if (key === 13) {
-			event.preventDefault();
-			if (next === 3) {
-				next += 1;
-				this.onkeyup = function() {
-					this.style.display = "none";
-					message.focus();
-					message.style.opacity = "1"
-					part.style.display = "none";
-				}
-			}
-			else {
-				partIndex -= 2;
-				next += 1;
-				this.style.display = "none";
-				input[next].focus();
-				input[next].style.opacity = "1";
-				part.style.zIndex = partIndex;
-			}
-		}
 	}
 }
 message.onkeydown = function() {
