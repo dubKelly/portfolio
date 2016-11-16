@@ -10,12 +10,13 @@ for (var i = 0; i < input.length; i++) {
 		this.style.width = "100%"
 		var key = event.keyCode;
 		var elem = this;
+		//	Avoid confusion with non-tab users
 		if (key === 9 || key === 13) {
 			event.preventDefault();
 			next++;
 			partIndex -= 2;
 			part.style.zIndex = partIndex;
-			if (next === 3) {
+			if (next === 4) {
 				message.focus();
 				var nextElem = message;
 			}
@@ -36,8 +37,8 @@ for (var i = 0; i < input.length; i++) {
 					else {
 					pos--;
 					nextPos--;
-					opCity = opCity - 0.1;
-					NextOpCity = NextOpCity + 0.1;
+					opCity -= 0.1;
+					NextOpCity += 0.1;
 					elem.style.top = pos + "%";
 					elem.style.opacity = opCity;
 					nextElem.style.top = nextPos + "%";
@@ -45,8 +46,8 @@ for (var i = 0; i < input.length; i++) {
 					}
 				}
 			}
-		}
 		func();
+		}
 	}
 }
 message.onkeydown = function() {
@@ -68,4 +69,17 @@ window.onscroll = function() {
 			input[next].focus();
 		}
 	}
+}
+done.onclick = function(event) {
+	event.preventDefault();
+	document.getElementById("form").style.display = "none";
+	document.getElementById("prev").style.display = "block";
+	document.getElementById("preview").innerHTML = 
+		message.value 
+		+ "<br><br>"
+		+ input[0].value
+		+ "<br>"
+		+ input[1].value + "&nbsp" + "ext.&nbsp" + input[2].value
+		+ "<br>"
+		+ input[3].value;
 }
