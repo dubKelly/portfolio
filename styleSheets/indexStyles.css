@@ -181,6 +181,9 @@ input:focus, textarea:focus {
 	height: 100%;
 	z-index: 8;
 }
+#cHead {
+	font-family: "Poiret One", sans-serif;
+}
 #prev {
 	height: 90%;
 	width: 90%;
