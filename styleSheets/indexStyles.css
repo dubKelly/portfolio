@@ -182,7 +182,14 @@ input:focus, textarea:focus {
 	z-index: 8;
 }
 #cHead {
+	position: relative;
+	top: 23%;
+	transform: translateY(-50%);
 	font-family: "Poiret One", sans-serif;
+	font-size: 6rem;
+	text-align: left;
+	color: #b02f1c;
+	margin-left: 15px;
 }
 #prev {
 	height: 90%;
