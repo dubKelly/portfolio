@@ -190,6 +190,7 @@ input:focus, textarea:focus {
 	text-align: left;
 	color: #b02f1c;
 	margin-left: 15px;
+	line-height: 85%;
 }
 #prev {
 	height: 90%;
