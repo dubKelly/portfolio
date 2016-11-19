@@ -1,8 +1,6 @@
 var input = document.getElementsByTagName("input");
 var message = document.getElementById("message");
 var back = document.getElementById("back");
-var part = document.getElementById("part");
-var partIndex = 8;
 var next = 0;
 var verify = false;
 for (var i = 0; i < input.length; i++) {
@@ -25,8 +23,6 @@ for (var i = 0; i < input.length; i++) {
 				input[2].style.display = "none";
 				next = next + 2;
 				input[next].focus();
-				partIndex = partIndex - 4;
-				part.style.zIndex = partIndex;
 				verify = false;
 				func();
 			}
@@ -42,9 +38,6 @@ for (var i = 0; i < input.length; i++) {
 			}
 			else {
 				next++;
-				console.log(next);
-				partIndex -= 2;
-				part.style.zIndex = partIndex;
 				verify = false;
 				func();
 				if (next === 4) {
@@ -78,9 +71,10 @@ for (var i = 0; i < input.length; i++) {
 					nextOpCity += 0.1;
 					elem.style.top = pos + "%";
 					elem.style.opacity = opCity;
-					elem.style.zIndex = 0;
+					elem.style.zIndex = "0";
 					nextElem.style.top = nextPos + "%";
 					nextElem.style.opacity = nextOpCity;
+					nextElem.style.zIndex = "2";
 					}
 				}
 			}
@@ -89,6 +83,7 @@ for (var i = 0; i < input.length; i++) {
 			this.style.textAlign = "center";
 			this.style.width = "100%"
 		}
+		console.log(next);
 	}
 }
 message.onkeydown = function(event) {
@@ -128,13 +123,14 @@ window.onscroll = function() {
 	}
 }
 back.onclick = function() {
-	var pos = 50;
-	var lastPos = 40;
-	var opCity = 1;
-	var lastOpCity = 0;
-	var int = setInterval(backFrame, 15);
-	function backFrame() {
-		if (next > 0) {
+	if (next > 0) {
+		var pos = 50;
+		var lastPos = 40;
+		var opCity = 1;
+		var lastOpCity = 0;
+		var int = setInterval(backFrame, 15);
+		function backFrame() {
+			console.log(next);
 			if (pos === 60) {
 				clearInterval(int);
 				if (next === 3 && input[2].value.length === 0) {
@@ -156,7 +152,7 @@ back.onclick = function() {
 					message.style.zIndex = "0";
 					input[next - 1].style.top = lastPos + "%";
 					input[next - 1].style.opacity = lastOpCity;
-					input[next - 1].style.zIndex = "10";
+					input[next - 1].style.zIndex = "2";
 					input[next - 1].focus();
 				}
 				else {
@@ -166,17 +162,23 @@ back.onclick = function() {
 					if (next === 3 && input[2].value.length === 0) {
 						input[next - 2].style.top = lastPos + "%";
 						input[next - 2].style.opacity = lastOpCity;
-						input[next - 2].style.zIndex = "10";
+						input[next - 2].style.zIndex = "2";
 						input[next - 2].focus();
 					}
 					else {
 						input[next - 1].style.top = lastPos + "%";
 						input[next - 1].style.opacity = lastOpCity;
-						input[next - 1].style.zIndex = "10";
+						input[next - 1].style.zIndex = "2";
 						input[next - 1].focus();
 					}
 				}
 			}
+		}
+	}
+	else {
+		this.onmouseup = function() {
+			input[0].focus();
+			console.log(next);
 		}
 	}
 }
