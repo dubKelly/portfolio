@@ -1,6 +1,6 @@
 var input = document.getElementsByTagName("input");
 var message = document.getElementById("message");
-var done = document.getElementById("done");
+var back = document.getElementById("back");
 var part = document.getElementById("part");
 var partIndex = 8;
 var next = 0;
@@ -37,11 +37,12 @@ for (var i = 0; i < input.length; i++) {
 					verify = true;
 				}
 				else {
-					console.log('"When you have bacon in your mouth, it doesn\'t matter who\'s president" -Louis C.K.')
+					console.log('"When you have bacon in your mouth, it doesn\'t matter who\'s president" -Louis C.K.');
 				}
 			}
 			else {
 				next++;
+				console.log(next);
 				partIndex -= 2;
 				part.style.zIndex = partIndex;
 				verify = false;
@@ -64,7 +65,7 @@ for (var i = 0; i < input.length; i++) {
 				var pos = 50;
 				var nextPos = 60;
 				var opCity = 1;
-				var NextOpCity = 0;
+				var nextOpCity = 0;
 				var int = setInterval(frame, 15);
 				function frame() {
 					if (pos === 40) {
@@ -74,11 +75,12 @@ for (var i = 0; i < input.length; i++) {
 					pos--;
 					nextPos--;
 					opCity -= 0.1;
-					NextOpCity += 0.1;
+					nextOpCity += 0.1;
 					elem.style.top = pos + "%";
 					elem.style.opacity = opCity;
+					elem.style.zIndex = 0;
 					nextElem.style.top = nextPos + "%";
-					nextElem.style.opacity = NextOpCity;
+					nextElem.style.opacity = nextOpCity;
 					}
 				}
 			}
@@ -100,7 +102,7 @@ message.onkeydown = function(event) {
 				verify = true;
 			}
 			else {
-				console.log("Have you ever noticed that you can always see your nose?")
+				console.log("Have you ever noticed that you can always see your nose?");
 			}
 		}
 	}
@@ -125,16 +127,56 @@ window.onscroll = function() {
 		}
 	}
 }
-done.onclick = function(event) {
-	event.preventDefault();
-	document.getElementById("form").style.display = "none";
-	document.getElementById("prev").style.display = "block";
-	document.getElementById("preview").innerHTML = 
-		message.value 
-		+ "<br><br>"
-		+ input[0].value
-		+ "<br>"
-		+ input[1].value + "&nbsp" + "ext.&nbsp" + input[2].value
-		+ "<br>"
-		+ input[3].value;
+back.onclick = function() {
+	var pos = 50;
+	var lastPos = 40;
+	var opCity = 1;
+	var lastOpCity = 0;
+	var int = setInterval(backFrame, 15);
+	function backFrame() {
+		if (next > 0) {
+			if (pos === 60) {
+				clearInterval(int);
+				if (next === 3 && input[2].value.length === 0) {
+					next -= 2;
+					input[2].style.display = "inline-block";
+				}
+				else {
+					next--;
+				}
+			}
+			else {
+				pos++;
+				lastPos++;
+				opCity -= 0.1;
+				lastOpCity += 0.1;
+				if (next === 4) {
+					message.style.top = pos + "%";
+					message.style.opacity = opCity;
+					message.style.zIndex = "0";
+					input[next - 1].style.top = lastPos + "%";
+					input[next - 1].style.opacity = lastOpCity;
+					input[next - 1].style.zIndex = "10";
+					input[next - 1].focus();
+				}
+				else {
+					input[next].style.top = pos + "%";
+					input[next].style.opacity = opCity;
+					input[next].style.zIndex = "0";
+					if (next === 3 && input[2].value.length === 0) {
+						input[next - 2].style.top = lastPos + "%";
+						input[next - 2].style.opacity = lastOpCity;
+						input[next - 2].style.zIndex = "10";
+						input[next - 2].focus();
+					}
+					else {
+						input[next - 1].style.top = lastPos + "%";
+						input[next - 1].style.opacity = lastOpCity;
+						input[next - 1].style.zIndex = "10";
+						input[next - 1].focus();
+					}
+				}
+			}
+		}
+	}
 }

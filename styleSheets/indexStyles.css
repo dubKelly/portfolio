@@ -87,7 +87,10 @@ a {
 	vertical-align: middle;
 	color: #c4351f;
 }
-a:hover {
+a {
+	outline: 0;
+}
+a:hover, a:active, a:focus {
 	border-bottom: solid white 1px;
 }
 .slash {
@@ -181,9 +184,14 @@ input:focus, textarea:focus {
 	height: 100%;
 	z-index: 8;
 }
+svg {
+	position: absolute;
+	top: 30px;
+	left: 30px;
+}
 #cHead {
 	position: relative;
-	top: 23%;
+	top: 26%;
 	transform: translateY(-50%);
 	font-family: "Poiret One", sans-serif;
 	font-size: 6rem;
