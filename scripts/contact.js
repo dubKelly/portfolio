@@ -10,7 +10,7 @@ for (var i = 0; i < input.length; i++) {
 		if (key === 9 || key === 13) {
 			event.preventDefault();
 			if (next === 0 && this.value.length === 0) {
-				if (verify === false) {
+				if (verify === false && this.placeholder.length === 9) {
 					this.style.width = this.offsetWidth + 15 + "px";
 					this.placeholder = this.placeholder + "*";
 					verify = true;
@@ -27,7 +27,7 @@ for (var i = 0; i < input.length; i++) {
 				func();
 			}
 			else if (next === 3 && input[1].value.length === 0 && this.value.length === 0) {
-				if (verify === false) {
+				if (verify === false && this.placeholder.length === 5) {
 					this.style.width = this.offsetWidth + 15 + "px";
 					this.placeholder = this.placeholder + "*";
 					verify = true;
@@ -91,7 +91,7 @@ message.onkeydown = function(event) {
 	if (key === 9 || key === 13) {
 		if (next === 4 && message.value.length === 0) {
 			event.preventDefault();
-			if (verify === false) {
+			if (verify === false && message.placeholder.length === 7) {
 				message.style.width = message.offsetWidth + 15 + "px";
 				message.placeholder = message.placeholder + "*";
 				verify = true;

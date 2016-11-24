@@ -17,12 +17,12 @@ section {
 	z-index: 2;
 }
 #about {
-	background-image: url(https://static01.nyt.com/packages/flash/Lens/2009/09/20090915-Showcase-Boogie/018-20090915-Showcase-Boogie.jpg);
-	background-attachment: fixed;
-	background-position: center;
+	//background-image: url(https://static01.nyt.com/packages/flash/Lens/2009/09/20090915-Showcase-Boogie/018-20090915-Showcase-Boogie.jpg);
+	//background-attachment: fixed;
+	//background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
-
+	background-color: white;
 }
 #contact {
 	background-color: #c4351f;
@@ -71,7 +71,10 @@ span.deltaXi {
 	height: 80%;
 	position: relative;
 }
-#nav {
+.nav {
+	display: none;
+}
+#mainNav {
 	width: 100%;
 	height: 20%;
 	position: relative;
