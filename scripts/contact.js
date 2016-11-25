@@ -52,7 +52,7 @@ for (var i = 0; i < input.length; i++) {
 				var nextElem = message;
 			}
 			else {
-				nextElem = input[next];	
+				nextElem = input[next];
 			}
 			function func() {
 				var pos = 50;
