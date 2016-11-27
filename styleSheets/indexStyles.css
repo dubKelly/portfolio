@@ -14,15 +14,21 @@ html, body {
 	top: 30px;
 	right: 34px;
 	z-index: 10;
+	cursor: pointer;
 }
 #goodBurger span {
 	position: absolute;
 	display: block;
 	height: 3px;
 	width: 100%;
-	background: #262626;
+	background: #c4351f;
 	opacity: 1;
+	left: 0;
 	z-index: 11;
+	-webkit-transition: .2s ease-in-out;
+	-moz-transition: .2s ease-in-out;
+	-o-transition: .2s ease-in-out;
+	transition: .2s ease-in-out;
 }
 #goodBurger span:nth-child(1) {
 	top: 6px;
@@ -32,6 +38,74 @@ html, body {
 }
 #goodBurger span:nth-child(4) {
 	top: 30px;
+}
+#goodBurger.open span:nth-child(1) {
+	top: 18px;
+	width: 0px;
+	left: 50%;
+}
+#goodBurger.open span:nth-child(2) {
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+#goodBurger.open span:nth-child(3) {
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+#goodBurger.open span:nth-child(4) {
+	top: 18px;
+	width: 0px;
+	left: 50%;
+}
+#mobileNav {
+	position: fixed;
+	height: 0%;
+	width: 100%;
+	top: 0px;
+	right: 0px;
+	overflow: hidden;
+	-webkit-transition: .2s ease-in-out;
+	-moz-transition: .2s ease-in-out;
+	-o-transition: .2s ease-in-out;
+	transition: .2s ease-in-out;
+}
+#mobileNav.open {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: 0.9;
+	z-index: 9;
+}
+#mobileNav ul {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+li {
+	display: block;
+	width: 100%;
+	text-align: center;
+	padding: 15% 0 15% 0;
+}
+a {
+	text-decoration: none;
+	padding-bottom: 12%;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	vertical-align: middle;
+	color: #c4351f;
+	outline: 0;
+}
+a:hover, a:active, a:focus {
+	border-bottom: solid white 1px;
 }
 section {
 	width: 100%;
@@ -109,20 +183,6 @@ span.deltaXi {
 }
 li {
 	display: inline-block;
-}
-a {
-	text-decoration: none;
-	padding-bottom: 12%;
-	font-size: 1.2rem;
-	text-transform: uppercase;
-	vertical-align: middle;
-	color: #c4351f;
-}
-a {
-	outline: 0;
-}
-a:hover, a:active, a:focus {
-	border-bottom: solid white 1px;
 }
 .slash {
 	font-family: "Work Sans", sans-serif;

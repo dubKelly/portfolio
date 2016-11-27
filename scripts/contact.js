@@ -83,7 +83,6 @@ for (var i = 0; i < input.length; i++) {
 			this.style.textAlign = "center";
 			this.style.width = "100%"
 		}
-		console.log(next);
 	}
 }
 message.onkeydown = function(event) {
@@ -130,7 +129,6 @@ back.onclick = function() {
 		var lastOpCity = 0;
 		var int = setInterval(backFrame, 15);
 		function backFrame() {
-			console.log(next);
 			if (pos === 60) {
 				clearInterval(int);
 				if (next === 3 && input[2].value.length === 0) {
@@ -178,7 +176,6 @@ back.onclick = function() {
 	else {
 		this.onmouseup = function() {
 			input[0].focus();
-			console.log(next);
 		}
 	}
 }
