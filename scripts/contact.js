@@ -110,17 +110,6 @@ message.onkeydown = function(event) {
 message.onkeyup = function() {
 	message.style.height = (message.scrollHeight) - 4 + "px";
 }
-window.onscroll = function() {
-	var vh = window.innerHeight;
-	if ((window.pageYOffset) >= (vh * 2)) {
-		if (next === 4) {
-			message.focus();
-		}
-		else {
-			input[next].focus();
-		}
-	}
-}
 back.onclick = function() {
 	if (next > 0) {
 		var pos = 50;
@@ -176,6 +165,67 @@ back.onclick = function() {
 	else {
 		this.onmouseup = function() {
 			input[0].focus();
+		}
+	}
+}
+var burger = document.getElementById("goodBurger");
+var mobileNav = document.getElementById("mobileNav");
+var span1 = document.getElementById("span1");
+var span2 = document.getElementById("span2");
+var span3 = document.getElementById("span3");
+var span4 = document.getElementById("span4");
+burger.onclick = function() {
+	this.classList.toggle("open");
+	mobileNav.classList.toggle("open");
+	if (this.className === "open" && window.pageYOffset >= window.innerHeight - 46) {
+		span2.style.background = "#c4351f";
+		span3.style.background = "#c4351f";
+	}
+	else if (this.className !== "open" && window.pageYOffset >= window.innerHeight - 46) {
+		span2.style.background = "#262626";
+		span3.style.background = "#262626";
+	}
+}
+var link = document.getElementsByTagName("a");
+for (var i = 0; i < link.length; i++) {
+	link[i].onclick = function() {
+		burger.classList.toggle("open");
+		mobileNav.classList.toggle("open");
+	}
+}
+window.onscroll = function() {
+	if (window.pageYOffset >= (window.innerHeight * 2)) {
+		if (next === 4) {
+			message.focus();
+		}
+		else {
+			input[next].focus();
+		}
+	}
+	else if (burger.className !== "open") {
+		if (window.pageYOffset >= (window.innerHeight - 34)) {
+			span1.style.background = "#262626";
+			span2.style.background = "#262626";
+			span3.style.background = "#262626";
+			span4.style.background = "#262626";
+		}
+		else if (window.pageYOffset >= (window.innerHeight - 46)) {
+			span1.style.background = "#c4351f";
+			span2.style.background = "#262626";
+			span3.style.background = "#262626";
+			span4.style.background = "#262626";
+		}
+		else if (window.pageYOffset >= (window.innerHeight - 58)) {
+			span1.style.background = "#c4351f";
+			span2.style.background = "#c4351f";
+			span3.style.background = "#c4351f";
+			span4.style.background = "#262626";
+		}
+		else if (window.pageYOffset < window.innerHeight - 34) {
+			span1.style.background = "#c4351f";
+			span2.style.background = "#c4351f";
+			span3.style.background = "#c4351f";
+			span4.style.background = "#c4351f";
 		}
 	}
 }
