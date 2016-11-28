@@ -44,7 +44,7 @@ window.onscroll = function() {
 			span3.style.background = "#c4351f";
 			span4.style.background = "#262626";
 		}
-		else if (window.pageYOffset < window.innerHeight -34) {
+		else if (window.pageYOffset < window.innerHeight - 34) {
 			span1.style.background = "#c4351f";
 			span2.style.background = "#c4351f";
 			span3.style.background = "#c4351f";
@@ -52,16 +52,3 @@ window.onscroll = function() {
 		}
 	}
 }
-/*
-window.onscrollup = function() {
-		span1.style.background = "#c4351f";
-	if (window.pageYOffset <= (window.innerHeight - 33)) {
-		span2.style.background = "#c4351f";
-		span3.style.background = "#c4351f";
-		span4.style.background = "#c4351f";
-	}
-	else if (window.pageYOffset <= (window.innerHeight - 45)) {
-	}
-	else if (window.pageYOffset <= (window.innerHeight - 33)) {
-	}
-}*/

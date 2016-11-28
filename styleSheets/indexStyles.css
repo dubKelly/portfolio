@@ -89,20 +89,20 @@ html, body {
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
-li {
+#mobileNav li {
 	display: block;
 	width: 100%;
 	text-align: center;
 	padding: 15% 0 15% 0;
 }
-a {
+#mobileNav a {
 	text-decoration: none;
 	padding-bottom: 12%;
 	font-size: 1.2rem;
 	text-transform: uppercase;
 	vertical-align: middle;
 	color: #c4351f;
-	outline: 0;
+	outline: none;
 }
 a:hover, a:active, a:focus {
 	border-bottom: solid white 1px;
@@ -170,27 +170,12 @@ span.deltaXi {
 }
 #main {
 	width: 100%;
-	height: 80%;
+	height: 75%;
 	position: relative;
 }
 .nav {
 	display: none;
 }
-/*#mainNav {
-	width: 100%;
-	height: 20%;
-	position: relative;
-}
-li {
-	display: inline-block;
-}
-.slash {
-	font-family: "Work Sans", sans-serif;
-	margin: 0 3% 0 3%;
-	font-size: 3rem;
-	color: #424242;
-	vertical-align: middle;
-}*/
 .pageTitle {
 	position: relative;
 	height: 100%;
@@ -229,15 +214,16 @@ li {
 }
 #cHead {
 	position: relative;
-	top: 26%;
+	top: 38%;
 	transform: translateY(-50%);
 	font-family: "Poiret One", sans-serif;
 	font-size: 6rem;
 	text-align: left;
 	color: #b02f1c;
-	margin-left: 15px;
+	margin: 0 0 0 15px;
 	line-height: 85%;
 	cursor: default;
+	z-index: -1;
 }
 form {
 	height: 100%;
@@ -349,53 +335,80 @@ svg {
 	font-size: 1.2rem;
 	color: #262626;
 }
-/*@media only screen and (min-width: 980px) {
-	html {
-		font-size: 125%;
+@media only screen and (min-width: 568px) {
+	#goodBurger, #mobileNav {
+		display: none;
+	}
+	.nav {
+		display: inline-block;
+	}
+	#mainNav {
+		position: relative;
+		height: 25%;
+		width: 100%;
+	}
+	li {
+		display: inline-block;
+		padding: 0 3%;
+		vertical-align: middle;
 	}
 	a {
-		font-size: 0.8rem;
+		text-decoration: none;
+		padding-bottom: 7px;
+		outline: none;
 	}
 	.slash {
-		font-size: 2.4rem;
+		font-family: "Work Sans", sans-serif;
+		font-size: 2.5rem;
 	}
-	.pageTitle {
-		width: 100%;
-		height: 100%;
-		position: relative;
+	#mainNav a {
+		color: #c4351f;
+		text-transform: uppercase;
+	}
+	#mainNav .slash {
+		color: #424242;
+	}
+	#about {
+		background-image: url("../images/mobileLandAbout.jpg");
 	}
 	#aHead {
 		position: fixed;
+		margin: 0;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		margin: 0;
-		padding: 0;
-		font-family: "Poiret One", sans-serif;
-		font-size: 14.4rem;
-		text-transform: uppercase;
-		color: #c4351f;
-		opacity: 0.3;
-		z-index: 1;
+		font-size: 9.5rem;
+		opacity: 0.2;
 	}
 	#blurb {
-		width: 40%;
-		height: 82%;
 		position: absolute;
-		padding: 10% 10% 0 10%;
-		text-align: center;
-		color: #262626;
-		z-index: 2;
+		height: 75%;
+		width: 63%;
+		top: 0;
+		left: 0;
 	}
-	#blurb a {
-		color: #262626;
-		border-color: #262626;
-		font-size: 0.8rem;
+	#aboutNav {
+		position: absolute;
+		height: 25%;
+		width: 63%;
+		top: 75%;
+		left: 0;
 	}
 	#aboutNav ul {
+		position: absolute;
 		width: 100%;
+		top: 50%;
+		transform: translateY(-50%);
 		text-align: center;
-		margin: 20% 0 0 0;
+		margin: 0;
 		padding: 0;
 	}
-}*/
+	#aboutNav a {
+		color: #262626;
+		text-transform: uppercase;
+	}
+	#aboutNav .slash {
+		color: #262626;
+	}
+	#aboutNav li {
+	}
