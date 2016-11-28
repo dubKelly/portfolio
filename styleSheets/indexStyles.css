@@ -341,7 +341,7 @@ svg {
 	font-size: 1.2rem;
 	color: #262626;
 }
-@media only screen and (min-width: 568px) {
+@media only screen and (min-width: 550px) {
 	#goodBurger, #mobileNav {
 		display: none;
 	}
@@ -418,3 +418,49 @@ svg {
 	}
 	#aboutNav li {
 	}
+@media only screen and (min-width: 800px) {
+	#about {
+		background-image: url("../images/about1050.jpg");
+	}
+	#aHead {
+		font-size: 14rem;
+	}
+	#blurb {
+		font-size: 1.2rem;
+	}
+	#aboutNav ul {
+		top: 0;
+	}
+}
+@media only screen and (min-width: 1050px) {
+	html, body {
+		font-size: 110%;
+	}
+	#aHead {
+		font-size: 18rem;
+	}
+	#blurb {
+		width: 55%;
+		left: 4%;
+	}
+	#userName {
+		width: 181px;
+	}
+	#phone {
+		width: 143px;
+	}
+	#ext {
+		width: 78px;
+	}
+	#email {
+		width: 100px;
+	}
+	#message {
+		width: 147px;
+	}
+}
+@media only screen and (min-width: 2000px) {
+	#about {
+		background-image: url("../images/deskAbout.jpg");
+	}
+}
