@@ -50,14 +50,14 @@ if (verifyFormToken('form1')) {
 		else {
 			return "Invalid Email";
 		}
-		$to = 'js.neeb1780@gmail.com';
+		$to = 'holla@jordanneeb.com';
 		$subject = "YaDontKnowNoOneWhoDontWantNothinDoneDoYa?";
 		$headers = "From:".$cleanedFrom."\r\n";
-		$headers .= "Reply-To:".strip_tags($_POST['email'])."r\n";
+		$headers .= "Reply-To:".strip_tags($_POST['email'])."\r\n";
 		$headers .= "MIME-Version: 1.0\r\n";
 		$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 		if (mail($to, $subject, $message, $headers)) {
-			echo "Message Sent!";
+			header('Location: #landing');
 		}
 		else {
 			echo "Message failed to send.";
@@ -78,7 +78,6 @@ else {
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<meta name="robots" content="noindex">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One|Ubuntu:300,400|Work+Sans:200|Alfa+Slab+One" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="styleSheets/indexStyles.css">

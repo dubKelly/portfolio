@@ -413,6 +413,9 @@ svg {
 		color: #262626;
 		text-transform: uppercase;
 	}
+	#aboutNav a:hover, #aboutNav a:active, #aboutNav a:focus {
+		border-bottom: solid #262626 1px;
+	}
 	#aboutNav .slash {
 		color: #262626;
 	}
