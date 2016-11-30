@@ -1,7 +1,7 @@
 var input = document.getElementsByTagName("input");
 var message = document.getElementById("message");
 var back = document.getElementById("back");
-var next = 0;
+var next = 1;
 var verify = false;
 for (var i = 0; i < input.length; i++) {
 	input[i].onkeydown = function(event) {
@@ -9,7 +9,7 @@ for (var i = 0; i < input.length; i++) {
 		//	Avoid confusion with non-tab users
 		if (key === 9 || key === 13) {
 			event.preventDefault();
-			if (next === 0 && this.value.length === 0) {
+			if (next === 1 && this.value.length === 0) {
 				if (verify === false && this.placeholder.length === 9) {
 					this.style.width = this.offsetWidth + 15 + "px";
 					this.placeholder = this.placeholder + "*";
@@ -19,14 +19,14 @@ for (var i = 0; i < input.length; i++) {
 					console.log('"Insanity: doing the same thing over and over again and expecting different results." -Albert Einstein');
 				}
 			}
-			else if (next === 1 && this.value.length === 0) {
-				input[2].style.display = "none";
+			else if (next === 2 && this.value.length === 0) {
+				input[3].style.display = "none";
 				next = next + 2;
 				input[next].focus();
 				verify = false;
 				func();
 			}
-			else if (next === 3 && input[1].value.length === 0 && this.value.length === 0) {
+			else if (next === 4 && input[2].value.length === 0 && this.value.length === 0) {
 				if (verify === false && this.placeholder.length === 5) {
 					this.style.width = this.offsetWidth + 15 + "px";
 					this.placeholder = this.placeholder + "*";
@@ -37,10 +37,11 @@ for (var i = 0; i < input.length; i++) {
 				}
 			}
 			else {
+				input[3].style.display = "block";
 				next++;
 				verify = false;
 				func();
-				if (next === 4) {
+				if (next === 5) {
 					message.focus();
 				}
 				else {
@@ -48,7 +49,7 @@ for (var i = 0; i < input.length; i++) {
 				}
 			}
 			var elem = this;
-			if (next === 4) {
+			if (next === 5) {
 				var nextElem = message;
 			}
 			else {
@@ -88,7 +89,7 @@ for (var i = 0; i < input.length; i++) {
 message.onkeydown = function(event) {
 	var key = event.keyCode;
 	if (key === 9 || key === 13) {
-		if (next === 4 && message.value.length === 0) {
+		if (next === 5 && message.value.length === 0) {
 			event.preventDefault();
 			if (verify === false && message.placeholder.length === 7) {
 				message.style.width = message.offsetWidth + 15 + "px";
@@ -111,7 +112,7 @@ message.onkeyup = function() {
 	message.style.height = (message.scrollHeight) - 4 + "px";
 }
 back.onclick = function() {
-	if (next > 0) {
+	if (next > 1) {
 		var pos = 50;
 		var lastPos = 40;
 		var opCity = 1;
@@ -120,7 +121,7 @@ back.onclick = function() {
 		function backFrame() {
 			if (pos === 60) {
 				clearInterval(int);
-				if (next === 3 && input[2].value.length === 0) {
+				if (next === 4 && input[3].value.length === 0) {
 					next -= 2;
 					input[2].style.display = "inline-block";
 				}
@@ -133,7 +134,7 @@ back.onclick = function() {
 				lastPos++;
 				opCity -= 0.1;
 				lastOpCity += 0.1;
-				if (next === 4) {
+				if (next === 5) {
 					message.style.top = pos + "%";
 					message.style.opacity = opCity;
 					message.style.zIndex = "0";
@@ -146,7 +147,7 @@ back.onclick = function() {
 					input[next].style.top = pos + "%";
 					input[next].style.opacity = opCity;
 					input[next].style.zIndex = "0";
-					if (next === 3 && input[2].value.length === 0) {
+					if (next === 4 && input[3].value.length === 0) {
 						input[next - 2].style.top = lastPos + "%";
 						input[next - 2].style.opacity = lastOpCity;
 						input[next - 2].style.zIndex = "2";
@@ -164,7 +165,7 @@ back.onclick = function() {
 	}
 	else {
 		this.onmouseup = function() {
-			input[0].focus();
+			input[1].focus();
 		}
 	}
 }
@@ -195,7 +196,7 @@ for (var i = 0; i < link.length; i++) {
 }
 window.onscroll = function() {
 	if (window.pageYOffset >= (window.innerHeight * 2)) {
-		if (next === 4) {
+		if (next === 5) {
 			message.focus();
 		}
 		else {

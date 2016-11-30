@@ -17,7 +17,7 @@ function verifyFormToken($form) {
 	}
 	return true;
 }
-if verifyFormToken('form1') {
+if (verifyFormToken('form1')) {
 	if (isset($_POST['message'])) {
 		$whitelist = array('token', 'name', 'phone', 'ext', 'email', 'message');
 		foreach ($_POST as $key => $value) {
@@ -57,7 +57,7 @@ if verifyFormToken('form1') {
 		$headers .= "MIME-Version: 1.0\r\n";
 		$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 		if (mail($to, $subject, $message, $headers)) {
-			echo "Message Sent!"
+			echo "Message Sent!";
 		}
 		else {
 			echo "Message failed to send.";
@@ -70,7 +70,7 @@ else {
 
 	}
 	else {
-		echo "?";
+		echo "Common, man. I never hurt nobody.";
 	}
 }
 ?>
@@ -142,7 +142,7 @@ $newToken = generateFormToken('form1');
 	</div>
 </section>
 <section id="contact">
-	<form id="form" method="post">
+	<form action="index.php" id="form" method="post">
 		<input type="hidden" name="token" value="<?php echo $newToken; ?>">
 		<input id="userName" type="text" name="name" placeholder="Your Name" tabindex="1">
 		<input id="phone" type="text" name="phone" placeholder="Phone #" tabindex="2">
