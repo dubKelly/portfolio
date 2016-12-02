@@ -169,29 +169,34 @@ back.onclick = function() {
 		}
 	}
 }
-var burger = document.getElementById("goodBurger");
+var burger = document.getElementsByClassName("goodBurger");
 var mobileNav = document.getElementById("mobileNav");
-var span1 = document.getElementById("span1");
-var span2 = document.getElementById("span2");
-var span3 = document.getElementById("span3");
-var span4 = document.getElementById("span4");
-burger.onclick = function() {
-	this.classList.toggle("open");
-	mobileNav.classList.toggle("open");
-	if (this.className === "open" && window.pageYOffset >= window.innerHeight - 46) {
-		span2.style.background = "#c4351f";
-		span3.style.background = "#c4351f";
-	}
-	else if (this.className !== "open" && window.pageYOffset >= window.innerHeight - 46) {
-		span2.style.background = "#262626";
-		span3.style.background = "#262626";
+var span1 = document.getElementsByClassName("span1");
+var span2 = document.getElementsByClassName("span2");
+var span3 = document.getElementsByClassName("span3");
+var span4 = document.getElementsByClassName("span4");
+for (var i = 0; i < 3; i++) {
+	burger[i].onclick = function() {
+		burger[0].classList.toggle("open");
+		burger[1].classList.toggle("open");
+		burger[2].classList.toggle("open");
+		mobileNav.classList.toggle("open");
+		if (mobileNav.className === "open") {
+			mobileNav.appendChild(document.getElementById("mainBurger"));
+		}
+		else if (mobileNav.className !== "open") {
+			document.getElementById("landing").appendChild(document.getElementById("mainBurger"));
+		}
 	}
 }
 var link = document.getElementsByTagName("a");
 for (var i = 0; i < link.length; i++) {
 	link[i].onclick = function() {
-		burger.classList.toggle("open");
+		burger[0].classList.toggle("open");
+		burger[1].classList.toggle("open");
+		burger[2].classList.toggle("open");
 		mobileNav.classList.toggle("open");
+		document.getElementById("landing").appendChild(document.getElementById("mainBurger"));
 	}
 }
 window.onscroll = function() {
@@ -203,7 +208,7 @@ window.onscroll = function() {
 			input[next].focus();
 		}
 	}
-	else if (burger.className !== "open") {
+	/*else if (burger.className !== "open") {
 		if (window.pageYOffset >= (window.innerHeight - 34)) {
 			span1.style.background = "#262626";
 			span2.style.background = "#262626";
@@ -228,5 +233,5 @@ window.onscroll = function() {
 			span3.style.background = "#c4351f";
 			span4.style.background = "#c4351f";
 		}
-	}
+	}*/
 }

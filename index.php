@@ -78,6 +78,7 @@ else {
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+	<meta name="robots" content="noindex">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One|Ubuntu:300,400|Work+Sans:200|Alfa+Slab+One" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="styleSheets/indexStyles.css">
@@ -87,12 +88,6 @@ else {
 $newToken = generateFormToken('form1');
 ?>
 <body>
-<div id="goodBurger">
-	<span id="span1"></span>
-	<span id="span2"></span>
-	<span id="span3"></span>
-	<span id="span4"></span>
-</div>
 <div id="mobileNav">
 	<ul>
 		<li><a href="#about">About</a></li>
@@ -101,6 +96,12 @@ $newToken = generateFormToken('form1');
 	</ul>
 </div>
 <section id="landing">
+	<div id="mainBurger" class="goodBurger">
+		<span class="span1"></span>
+		<span class="span2"></span>
+		<span class="span3"></span>
+		<span class="span4"></span>
+	</div>
 	<div id="main">
 		<h1>
 			<span id="first" class="name">Jord<span class="deltaXi">Δ</span>​‌n</span>
@@ -119,6 +120,12 @@ $newToken = generateFormToken('form1');
 	</div>
 </section>
 <section id="about">
+	<div id="aboutBurger" class="goodBurger">
+		<span class="span1"></span>
+		<span class="span2"></span>
+		<span class="span3"></span>
+		<span class="span4"></span>
+	</div>
 	<div class="pageTitle">
 		<h2 id="aHead">About</h2>
 	</div>
@@ -141,6 +148,12 @@ $newToken = generateFormToken('form1');
 	</div>
 </section>
 <section id="contact">
+	<div id="contactBurger" class="goodBurger">
+		<span class="span1"></span>
+		<span class="span2"></span>
+		<span class="span3"></span>
+		<span class="span4"></span>
+	</div>
 	<form action="index.php" id="form" method="post">
 		<input type="hidden" name="token" value="<?php echo $newToken; ?>">
 		<input id="userName" type="text" name="name" placeholder="Your Name" tabindex="1">
