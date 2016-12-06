@@ -80,7 +80,7 @@ else {
 	<meta charset="utf-8">
 	<meta name="robots" content="noindex">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://fonts.googleapis.com/css?family=Poiret+One|Ubuntu:300,400|Work+Sans:200|Alfa+Slab+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poiret+One|Ubuntu:400|Work+Sans:200" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="styleSheets/indexStyles.css">
 	<title>Jordan Neeb | Toronto Web Developer</title>
 </head>
@@ -126,8 +126,8 @@ $newToken = generateFormToken('form1');
 		<span class="span3"></span>
 		<span class="span4"></span>
 	</div>
-	<div class="pageTitle">
-		<h2 id="aHead">About</h2>
+	<div id="mLand">
+		<div id="inner"></div>
 	</div>
 	<div id="blurb">
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

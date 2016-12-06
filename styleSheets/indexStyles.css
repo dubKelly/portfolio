@@ -132,19 +132,23 @@ section {
 }
 #landing {
 	background-color: #262626;
-	z-index: 2;
+	z-index: 8;
+}
+#mLand {
+	display: none;
 }
 #about {
-	background-image: url("../images/mobileAbout.jpg");
+	background-image: url(../images/mobileAbout.jpg);
 	background-attachment: fixed;
 	background-position: center;
-	background-size: cover;
 	background-repeat: no-repeat;
-	z-index: 2;
+	background-size: cover;
+	max-height: 100%;
+	z-index: 8;
 }
 #contact {
 	background-color: #c4351f;
-	z-index: 2;
+	z-index: 8;
 }
 span {
 	display: block;
@@ -193,24 +197,6 @@ span.deltaXi {
 }
 .nav {
 	display: none;
-}
-.pageTitle {
-	position: relative;
-	height: 100%;
-	width: 100%;
-}
-#aHead {
-	position: fixed;
-	top: 60px;
-	left: -30px;
-	transform: rotate(90deg);
-	font-family: "Poiret One", sans-serif;
-	font-size: 3rem;
-	text-transform: uppercase;
-	color: #c4351f;
-	opacity: 0.4;
-	z-index: 0;
-	cursor: default;
 }
 #blurb {
 	position: absolute;
@@ -353,12 +339,15 @@ svg {
 	font-size: 1.2rem;
 	color: #262626;
 }
-@media only screen and (min-width: 550px) {
+@media only screen and (min-width: 400px) {
 	.goodBurger, #mobileNav {
 		display: none;
 	}
 	.nav {
 		display: inline-block;
+	}
+	#landing {
+		z-index: 9;
 	}
 	#mainNav {
 		position: relative;
@@ -386,17 +375,29 @@ svg {
 	#mainNav .slash {
 		color: #424242;
 	}
-	#about {
-		background-image: url("../images/mobileLandAbout.jpg");
-	}
-	#aHead {
+	#mLand {
+		display: block;
 		position: fixed;
-		margin: 0;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		font-size: 9.5rem;
-		opacity: 0.2;
+		top: -50%;
+		left: -50%;
+		width: 200%;
+		height: 200%;
+		z-index: -1;
+	}
+	#inner {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		min-width: 50%;
+		min-height: 50%;
+		background-image: url("../images/about1050.jpg");
+		background-attachment: scroll;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 570px 396px;
 	}
 	#blurb {
 		position: absolute;
@@ -433,7 +434,10 @@ svg {
 	}
 	#aboutNav li {
 	}
-@media only screen and (min-width: 800px) {
+/*@media only screen and (min-width: 800px) {
+	#mLand {
+		display: none;
+	}
 	#about {
 		background-image: url("../images/about1050.jpg");
 	}
@@ -478,4 +482,4 @@ svg {
 	#about {
 		background-image: url("../images/deskAbout.jpg");
 	}
-}
+}*/

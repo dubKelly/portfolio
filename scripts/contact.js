@@ -208,30 +208,4 @@ window.onscroll = function() {
 			input[next].focus();
 		}
 	}
-	/*else if (burger.className !== "open") {
-		if (window.pageYOffset >= (window.innerHeight - 34)) {
-			span1.style.background = "#262626";
-			span2.style.background = "#262626";
-			span3.style.background = "#262626";
-			span4.style.background = "#262626";
-		}
-		else if (window.pageYOffset >= (window.innerHeight - 46)) {
-			span1.style.background = "#c4351f";
-			span2.style.background = "#262626";
-			span3.style.background = "#262626";
-			span4.style.background = "#262626";
-		}
-		else if (window.pageYOffset >= (window.innerHeight - 58)) {
-			span1.style.background = "#c4351f";
-			span2.style.background = "#c4351f";
-			span3.style.background = "#c4351f";
-			span4.style.background = "#262626";
-		}
-		else if (window.pageYOffset < window.innerHeight - 34) {
-			span1.style.background = "#c4351f";
-			span2.style.background = "#c4351f";
-			span3.style.background = "#c4351f";
-			span4.style.background = "#c4351f";
-		}
-	}*/
 }
