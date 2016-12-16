@@ -138,8 +138,7 @@ section {
 	display: none;
 }
 #about {
-	background-image: url(../images/mobileAbout.jpg);
-	background-attachment: fixed;
+	background-color: white;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -339,7 +338,10 @@ svg {
 	font-size: 1.2rem;
 	color: #262626;
 }
-@media only screen and (min-width: 400px) {
+	#inner {
+		background-size: 50% auto;
+	}
+@media only screen and (min-width: 520px) {
 	.goodBurger, #mobileNav {
 		display: none;
 	}
@@ -375,29 +377,10 @@ svg {
 	#mainNav .slash {
 		color: #424242;
 	}
-	#mLand {
-		display: block;
-		position: fixed;
-		top: -50%;
-		left: -50%;
-		width: 200%;
-		height: 200%;
-		z-index: -1;
-	}
-	#inner {
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		margin: auto;
-		min-width: 50%;
-		min-height: 50%;
-		background-image: url("../images/about1050.jpg");
-		background-attachment: scroll;
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: 570px 396px;
+	#about {
+		height: 351px;
+		background-image: url("../images/about628.jpg");
+		background-size: 100% auto;
 	}
 	#blurb {
 		position: absolute;
@@ -434,7 +417,7 @@ svg {
 	}
 	#aboutNav li {
 	}
-/*@media only screen and (min-width: 800px) {
+/*@media only screen and (min-width: 770px) {
 	#mLand {
 		display: none;
 	}
