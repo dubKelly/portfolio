@@ -80,6 +80,7 @@ html, body {
 	background: #c4351f;
 }
 #mobileNav {
+	display: none;
 	position: fixed;
 	height: 0%;
 	width: 100%;

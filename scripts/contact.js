@@ -182,9 +182,11 @@ for (var i = 0; i < 3; i++) {
 		burger[2].classList.toggle("open");
 		mobileNav.classList.toggle("open");
 		if (mobileNav.className === "open") {
+			document.getElementById("mobileNav").style.display = "block";
 			mobileNav.appendChild(document.getElementById("mainBurger"));
 		}
 		else if (mobileNav.className !== "open") {
+			document.getElementById("mobileNav").style.display = "none";
 			document.getElementById("landing").appendChild(document.getElementById("mainBurger"));
 		}
 	}
