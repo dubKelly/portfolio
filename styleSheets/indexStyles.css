@@ -214,11 +214,13 @@ span.deltaXi {
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 }
 #cHead {
 	position: relative;
 	top: 38%;
+	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%);
 	font-family: "Poiret One", sans-serif;
 	font-size: 6rem;
@@ -235,6 +237,7 @@ form {
 	text-align: center;
 	position: absolute;
 	left: 50%;
+	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
 	color: #262626;
 }
@@ -242,6 +245,7 @@ input, textarea {
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	background-color: transparent;
 	border: none;
@@ -302,6 +306,7 @@ input:focus, textarea:focus {
 	font-size: 2rem;
 	position: relative;
 	top: 83%;
+	-webkit-transform: translate(-50%, -50%);
 	transform: translateY(-50%, -50%);
 	padding: 0 15% 0 15%;
 	color: #9a2918;
