@@ -185,6 +185,7 @@ span.deltaXi {
 	position: absolute;
 	top: 60%;
 	left: 50%;
+	-webkit-transform: translate(-50%, -40%);
 	transform: translate(-50%, -40%);
 	margin: 0;
 	padding: 0;
@@ -379,7 +380,7 @@ svg {
 	}
 	#about {
 		height: 351px;
-		background-image: url("../images/about628.jpg");
+		background-image: url("../images/about695.jpg");
 		background-size: 100% auto;
 	}
 	#blurb {
@@ -417,12 +418,14 @@ svg {
 	}
 	#aboutNav li {
 	}
-/*@media only screen and (min-width: 770px) {
+@media only screen and (min-width: 695px) {
 	#mLand {
 		display: none;
 	}
 	#about {
-		background-image: url("../images/about1050.jpg");
+		height: 475px;
+		background-image: url("../images/aboutLrg.jpg");
+		background-size: 100% auto;
 	}
 	#aHead {
 		font-size: 14rem;
@@ -434,7 +437,7 @@ svg {
 		top: 0;
 	}
 }
-@media only screen and (min-width: 1050px) {
+@media only screen and (min-width: 930px) {
 	html, body {
 		font-size: 110%;
 	}
@@ -445,7 +448,12 @@ svg {
 		width: 55%;
 		left: 4%;
 	}
-	#userName {
+	#about {
+		height: 651px;
+		background-image: url("../images/about930.jpg");
+		background-size: 100% auto;
+	}
+/*	#userName {
 		width: 181px;
 	}
 	#phone {
