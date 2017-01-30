@@ -1,3 +1,6 @@
+/*
+**Contact form when reliable touchscreen detection is available**
+
 var input = document.getElementsByTagName("input");
 var message = document.getElementById("message");
 var back = document.getElementById("back");
@@ -168,7 +171,7 @@ back.onclick = function() {
 			input[1].focus();
 		}
 	}
-}
+}*/
 var burger = document.getElementsByClassName("goodBurger");
 var mobileNav = document.getElementById("mobileNav");
 var span1 = document.getElementsByClassName("span1");
@@ -201,6 +204,9 @@ for (var i = 0; i < link.length; i++) {
 		document.getElementById("landing").appendChild(document.getElementById("mainBurger"));
 	}
 }
+/*
+**""**
+
 window.onscroll = function() {
 	if (window.pageYOffset >= (window.innerHeight * 2)) {
 		if (next === 5) {
@@ -210,4 +216,4 @@ window.onscroll = function() {
 			input[next].focus();
 		}
 	}
-}
+}*/

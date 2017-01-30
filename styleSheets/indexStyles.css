@@ -139,7 +139,7 @@ section {
 	display: none;
 }
 #about {
-	background-color: white;
+	background-color: #424242;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -235,47 +235,80 @@ span.deltaXi {
 form {
 	height: 100%;
 	width: 100%;
-	text-align: center;
-	position: absolute;
-	left: 50%;
-	-webkit-transform: translateX(-50%);
-	transform: translateX(-50%);
 	color: #262626;
 }
+input, textarea, #done {
+	display: block;
+}
+#inputs {
+	position: absolute;
+	width: 50%;
+	top: 33%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+#submitBtn {
+	position: absolute;
+	top: 75%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+input, textarea {
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #262626;
+	height: 1.2rem;
+	text-align: left;
+	font-family: "Ubuntu", sans-serif;
+	font-size: 1.2rem;
+	color: #262626;
+	padding-top: 8px;
+	width: 100%;
+}
+#phone {
+	width: 66%;
+	float: left;
+}
+#ext {
+	width: 33%;
+	float: right;
+}
+#message {
+	height: 4.8rem;
+	width: 98%;
+}
+input:focus, textarea:focus {
+	outline: none;
+}
+::-webkit-input-placeholder {
+	text-align: left;
+	font-family: "Ubuntu", sans-serif;
+	font-size: 1.2rem;
+	color: #262626;
+}
+:-moz-placeholder {
+	text-align: left;
+	font-family: "Ubuntu", sans-serif;
+	font-size: 1.2rem;
+	color: #262626;
+}
+::-moz-placeholder {
+	text-align: left;
+	font-family: "Ubuntu", sans-serif;
+	font-size: 1.2rem;
+	color: #262626;
+}
+/*
+**Form when reliable touchscreen detection is available**
+
 input, textarea {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
-	background-color: transparent;
-	border: none;
-	height: 2.1rem;
-	text-align: right;
-	font-family: "Ubuntu", sans-serif;
-	font-size: 2rem;
-	color: #262626;
-}
-input:focus, textarea:focus {
-	outline: none;
-}
-::-webkit-input-placeholder {
-	text-align: center;
-	font-family: "Ubuntu", sans-serif;
-	font-size: 2rem;
-	color: #262626;
-}
-:-moz-placeholder {
-	text-align: center;
-	font-family: "Ubuntu", sans-serif;
-	font-size: 2rem;
-	color: #262626;
-}
-::-moz-placeholder {
-	text-align: center;
-	font-family: "Ubuntu", sans-serif;
-	font-size: 2rem;
-	color: #262626;
 }
 #message, #phone, #ext, #email {
 	opacity: 0;
@@ -347,7 +380,7 @@ svg {
 }
 	#inner {
 		background-size: 50% auto;
-	}
+	}*/
 @media only screen and (min-width: 520px) {
 	.goodBurger, #mobileNav {
 		display: none;
@@ -424,6 +457,9 @@ svg {
 	}
 	#aboutNav li {
 	}
+	#inputs, #submitBtn {
+		left: 66%;
+	}
 @media only screen and (min-width: 695px) {
 	#mLand {
 		display: none;
@@ -455,7 +491,7 @@ svg {
 		left: 4%;
 	}
 	#about {
-		height: 651px;
+		height: 655px;
 		background-image: url("../images/about930.jpg");
 		background-size: 100% auto;
 	}

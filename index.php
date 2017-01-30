@@ -89,7 +89,7 @@ $newToken = generateFormToken('form1');
 ?>
 <body>
 <div id="mobileNav">
-	<ul>
+	<ul id="mobileNavList">
 		<li><a href="#about">About</a></li>
 		<li><a href="#work">Work</a></li>
 		<li><a href="#contact">Contact</a></li>
@@ -126,9 +126,6 @@ $newToken = generateFormToken('form1');
 		<span class="span3"></span>
 		<span class="span4"></span>
 	</div>
-	<div id="mLand">
-		<div id="inner"></div>
-	</div>
 	<div id="blurb">
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -155,12 +152,17 @@ $newToken = generateFormToken('form1');
 		<span class="span4"></span>
 	</div>
 	<form action="index.php" id="form" method="post">
-		<input type="hidden" name="token" value="<?php echo $newToken; ?>">
-		<input id="userName" type="text" name="name" placeholder="Your Name" tabindex="1">
-		<input id="phone" type="text" name="phone" placeholder="Phone #" tabindex="2">
-		<input id="ext" type="text" name="ext" placeholder="Ext." tabindex="3">
-		<input id="email" type="text" name="email" placeholder="Email" tabindex="4">
-		<textarea id="message" type="text" name="message" placeholder="Message" tabindex="5"></textarea>
+		<div id="inputs">
+			<input type="hidden" name="token" value="<?php echo $newToken; ?>">
+			<input id="userName" type="text" name="name" placeholder="Your Name" tabindex="1">
+			<input id="phone" type="text" name="phone" placeholder="Phone #" tabindex="2">
+			<input id="ext" type="text" name="ext" placeholder="Ext." tabindex="3">
+			<input id="email" type="text" name="email" placeholder="Email" tabindex="4">
+			<textarea id="message" type="text" name="message" placeholder="Message" tabindex="5"></textarea>
+		</div>
+		<!--
+		**For non-touch devices**
+
 		<div id="part">
 		<svg height="38px" id="back" style="enable-background:new 0 0 128 128;" version="1.1" viewBox="0 0 128 128" width="38px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 		<g>
@@ -171,9 +173,12 @@ $newToken = generateFormToken('form1');
 			<line style="fill:none;stroke:#262626;stroke-width:10;stroke-miterlimit:10;" x1="17.787" x2="118.213" y1="64" y2="64"/>
 		</g>
 		</svg>
-		<h2 id="cHead">What's<br>Up?</h2>
 		</div>
-		<button id="done">Submit</button>
+		-->
+		<h2 id="cHead">What's<br>Up?</h2>
+		<div id="submitBtn">
+			<button id="done">Submit</button>
+		</div>
 	</form>
 	<div id="prev">
 		<p id="preview"></p>
