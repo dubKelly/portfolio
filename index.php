@@ -82,6 +82,7 @@ else {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One|Ubuntu:400|Work+Sans:200" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="styleSheets/indexStyles.css">
+	<link rel="icon" href="images/signSm.ico">
 	<title>Jordan Neeb | Toronto Web Developer</title>
 </head>
 <?php
