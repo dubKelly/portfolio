@@ -159,6 +159,7 @@ $newToken = generateFormToken('form1');
 			<input id="ext" type="text" name="ext" placeholder="Ext." tabindex="3">
 			<input id="email" type="text" name="email" placeholder="Email" tabindex="4">
 			<textarea id="message" type="text" name="message" placeholder="Message" tabindex="5"></textarea>
+			<button id="done">Submit</button>
 		</div>
 		<!--
 		**For non-touch devices**
@@ -177,13 +178,14 @@ $newToken = generateFormToken('form1');
 		-->
 		<h2 id="cHead">What's<br>Up?</h2>
 		<div id="submitBtn">
-			<button id="done">Submit</button>
 		</div>
 	</form>
 	<div id="prev">
 		<p id="preview"></p>
 	</div>
 </section>
+<footer>
+</footer>
 <script type="text/javascript" src="scripts/contact.js"></script>
 </body>
 </html>

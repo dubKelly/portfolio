@@ -149,6 +149,12 @@ section {
 #contact {
 	background-color: #c4351f;
 	z-index: 8;
+	min-height: 420px;
+}
+footer {
+	height: 160px;
+	width: 100%;
+	background-color: #262626;
 }
 span {
 	display: block;
@@ -242,15 +248,9 @@ input, textarea, #done {
 }
 #inputs {
 	position: absolute;
+	max-height: 60%;
 	width: 50%;
-	top: 33%;
-	left: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-}
-#submitBtn {
-	position: absolute;
-	top: 75%;
+	top: 50%;
 	left: 50%;
 	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
@@ -259,12 +259,13 @@ input, textarea {
 	background-color: transparent;
 	border: none;
 	border-bottom: 1px solid #262626;
+	border-radius: 0px;
 	height: 1.2rem;
 	text-align: left;
 	font-family: "Ubuntu", sans-serif;
 	font-size: 1.2rem;
 	color: #262626;
-	padding-top: 8px;
+	padding: 8px 0px 0px 0px;
 	width: 100%;
 }
 #phone {
@@ -276,8 +277,21 @@ input, textarea {
 	float: right;
 }
 #message {
-	height: 4.8rem;
-	width: 98%;
+	height: 8.4rem;
+	width: 100%;
+	resize: none;
+}
+#done {
+	background-color: transparent;
+	border: 1px solid #262626;
+	font-size: 1.2rem;
+	font-family: "Ubuntu", sans-serif;
+	margin: 20px 0 0 0;
+	padding: 0 15% 0 15%;
+	float: right;
+}
+#done:hover {
+	background-color: #b02f1c;
 }
 input:focus, textarea:focus {
 	outline: none;
