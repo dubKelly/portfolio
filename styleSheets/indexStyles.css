@@ -474,6 +474,9 @@ svg {
 	#inputs, #submitBtn {
 		left: 66%;
 	}
+	a svg:hover #gitHub {
+		fill: #c4351f;
+	}
 	#footNav {
 		position: relative;
 		width: 20%;
