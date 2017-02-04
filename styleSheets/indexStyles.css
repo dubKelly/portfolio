@@ -474,6 +474,34 @@ svg {
 	#inputs, #submitBtn {
 		left: 66%;
 	}
+	#footNav {
+		position: relative;
+		width: 20%;
+		left: 75%;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+	#footNav ul {
+		margin: 0px;
+		padding: 0px;
+		text-align: right;
+	}
+	#footNav li {
+		text-transform: uppercase;
+		color: #c4351f;
+		display: block;
+		margin-bottom: 12px;
+	}
+	#footNav a {
+		color: #c4351f;
+		padding: 0 8px 0 0;
+		border-right: 1px solid transparent;
+	}
+	#footNav a:hover {
+		border-bottom: none;
+		border-right: 1px solid white;
+	}
 @media only screen and (min-width: 695px) {
 	#mLand {
 		display: none;

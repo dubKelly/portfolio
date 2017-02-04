@@ -186,6 +186,13 @@ $newToken = generateFormToken('form1');
 	</div>
 </section>
 <footer>
+	<div id="footNav">
+		<ul>
+			<li><a href="#landing">Home</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="work">Work</a></li>
+		</ul>
+	</div>
 </footer>
 <script type="text/javascript" src="scripts/contact.js"></script>
 </body>
