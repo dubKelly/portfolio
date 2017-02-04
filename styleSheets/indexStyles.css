@@ -7,6 +7,9 @@ html, body {
 	font-size: 100%;
 	font-family: "Ubuntu", sans-serif;
 }
+a {
+	text-decoration: none;
+}
 .goodBurger {
 	position: fixed;
 	height: 38px;
@@ -314,6 +317,40 @@ input:focus, textarea:focus {
 	font-size: 1.2rem;
 	color: #262626;
 }
+#icons {
+	position: relative;
+	width: 227px;
+	float: left;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	vertical-align: middle;
+}
+.icon {
+	padding: 0 12px 0 12px;
+}
+.icon:hover {
+	border: none;
+}
+a svg:hover #gitHub {
+	fill: #800080;
+}
+a svg:hover .linkedIn {
+	fill: #0274b3;
+}
+a svg:hover #youTube {
+	fill: #dc2825;
+}
+a svg:hover #play {
+	fill: white;
+}
+#lI {
+	padding-bottom: 6px;
+}
+#footNav {
+	display: none;
+}
 /*
 **Form when reliable touchscreen detection is available**
 
@@ -396,6 +433,36 @@ svg {
 		background-size: 50% auto;
 	}*/
 @media only screen and (min-width: 520px) {
+	#footNav {
+		display: block;
+		position: relative;
+		width: 20%;
+		left: 75%;
+		top: 50%;
+		-webkit-transform: translateY(-70%);
+		transform: translateY(-70%);
+	}
+	#footNav ul {
+		margin: 0px;
+		padding: 0px;
+		text-align: right;
+	}
+	#footNav li {
+		text-transform: uppercase;
+		color: #c4351f;
+		display: block;
+		margin-bottom: 12px;
+		line-height: 1.2rem;
+	}
+	#footNav a {
+		color: #c4351f;
+		padding: 0 8px 0 0;
+		border-right: 2px solid transparent;
+	}
+	#footNav a:hover {
+		border-bottom: none;
+		border-right: 2px solid #424242;
+	}
 	.goodBurger, #mobileNav {
 		display: none;
 	}
@@ -473,37 +540,6 @@ svg {
 	}
 	#inputs, #submitBtn {
 		left: 66%;
-	}
-	a svg:hover #gitHub {
-		fill: #c4351f;
-	}
-	#footNav {
-		position: relative;
-		width: 20%;
-		left: 75%;
-		top: 50%;
-		-webkit-transform: translateY(-50%);
-		transform: translateY(-50%);
-	}
-	#footNav ul {
-		margin: 0px;
-		padding: 0px;
-		text-align: right;
-	}
-	#footNav li {
-		text-transform: uppercase;
-		color: #c4351f;
-		display: block;
-		margin-bottom: 12px;
-	}
-	#footNav a {
-		color: #c4351f;
-		padding: 0 8px 0 0;
-		border-right: 1px solid transparent;
-	}
-	#footNav a:hover {
-		border-bottom: none;
-		border-right: 1px solid white;
 	}
 @media only screen and (min-width: 695px) {
 	#mLand {
