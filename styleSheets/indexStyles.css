@@ -339,8 +339,8 @@ a svg:hover #gitHub {
 a svg:hover .linkedIn {
 	fill: #0274b3;
 }
-a svg:hover #youTube {
-	fill: #dc2825;
+a svg:hover #codePen {
+	fill: black;
 }
 a svg:hover #play {
 	fill: white;
@@ -351,87 +351,6 @@ a svg:hover #play {
 #footNav {
 	display: none;
 }
-/*
-**Form when reliable touchscreen detection is available**
-
-input, textarea {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-}
-#message, #phone, #ext, #email {
-	opacity: 0;
-}
-#userName {
-	width: 164px;
-	z-index: 2;
-}
-#phone {
-	width: 130px;
-	z-index: 0;
-}
-#ext {
-	width: 65px;
-	z-index: 0;
-}
-#email {
-	width: 88px;
-	z-index: 0;
-}
-#message {
-	width: 130px;
-	z-index: 0;
-	resize: none;
-	overflow: auto;
-}
-#done {
-	font-family: "Ubuntu", sans-serif;
-	font-size: 2rem;
-	position: relative;
-	top: 83%;
-	-webkit-transform: translate(-50%, -50%);
-	transform: translateY(-50%, -50%);
-	padding: 0 15% 0 15%;
-	color: #9a2918;
-	background-color: transparent;
-	border: none;
-	z-index: 2;
-	display: none;
-}
-#done:hover, #done:focus {
-	outline: none;
-	color: #262626;
-	border-color: #262626;
-}
-#part {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
-}
-svg {
-	position: absolute;
-	top: 30px;
-	left: 30px;
-	fill: #262626;
-	cursor: pointer;
-}
-#prev {
-	height: 90%;
-	width: 90%;
-	padding: 5%;
-	display: none;
-}
-#preview {
-	font-family: "Ubuntu", sans-serif;
-	font-size: 1.2rem;
-	color: #262626;
-}
-	#inner {
-		background-size: 50% auto;
-	}*/
 @media only screen and (min-width: 520px) {
 	#footNav {
 		display: block;
@@ -576,24 +495,8 @@ svg {
 		background-image: url("../images/about930.jpg");
 		background-size: 100% auto;
 	}
-/*	#userName {
-		width: 181px;
-	}
-	#phone {
-		width: 143px;
-	}
-	#ext {
-		width: 78px;
-	}
-	#email {
-		width: 100px;
-	}
-	#message {
-		width: 147px;
-	}
-}
 @media only screen and (min-width: 2000px) {
 	#about {
 		background-image: url("../images/deskAbout.jpg");
 	}
-}*/
+}
