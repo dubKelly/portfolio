@@ -110,6 +110,20 @@ _____________________________________________________________________
 _____________________________________________________________________
 _____________________________________________________________________
 
+- animate landing onLoad
+- animate link underline
+- create header || fix burger bug
+- finish about background
+- link contact form to landing page onFail
+- re-design contact section
+- replace youTube with codePen
+- slow scroll
+- write about blurb
+- SEO
+- hit up dem robots
+- comments
+- *paralax & fixed h1 on about
+
 -->
 </head>
 <?php
