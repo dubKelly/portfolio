@@ -330,7 +330,7 @@ input:focus, textarea:focus {
 .icon {
 	padding: 0 12px 0 12px;
 }
-.icon:hover {
+.icon:hover, .icon:active, .icon:focus {
 	border: none;
 }
 a svg:hover #gitHub {
