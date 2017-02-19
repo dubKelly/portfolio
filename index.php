@@ -156,9 +156,13 @@ $newToken = generateFormToken('form1');
 				<li class="underline"><a href="#about" tabindex="-1">About</a></li>
 			</div>
 			<li class="slash">/</li>
-			<li><a href="#work" tabindex="-1">Work</a></li>
+			<div class="underContainer">
+				<li class="underline"><a href="#work" tabindex="-1">Work</a></li>
+			</div>
 			<li class="slash">/</li>
-			<li><a href="#contact" tabindex="-1">Contact</a></li>
+			<div class="underContainer">
+				<li class="underline"><a href="#contact" tabindex="-1">Contact</a></li>
+			</div>
 		</ul>
 	</div>
 </section>
@@ -179,11 +183,17 @@ $newToken = generateFormToken('form1');
 	</div>
 	<div id="aboutNav" class="nav">
 		<ul>
-			<li><a href="#landing" tabindex="-1">Home</a></li>
+			<div class="underContainer">
+				<li class="black underline"><a href="#landing" tabindex="-1">Home</a></li>
+			</div>
 			<li class="slash">/</li>
-			<li><a href="#work" tabindex="-1">Work</a></li>
+			<div class="underContainer">
+				<li class="black underline"><a href="#work" tabindex="-1">Work</a></li>
+			</div>
 			<li class="slash">/</li>
-			<li><a href="#contact" tabindex="-1">Contact</a></li>
+			<div class="underContainer">
+				<li class="black underline"><a href="#contact" tabindex="-1">Contact</a></li>
+			</div>
 		</ul>
 	</div>
 </section>

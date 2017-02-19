@@ -134,7 +134,7 @@ a {
 }
 .underline::after {
 	position: absolute;
-	top: 110%;
+	top: 120%;
 	left: 50%;
 	content: "";
 	height: 1px;
@@ -142,9 +142,12 @@ a {
 	background-color: white;
 	-webkit-transition: all 0.15s ease-in-out; 
 }
+.black::after {
+	background-color: #262626;
+}
 .underline:hover::after {
-	width: 98%;
-	left: 0;
+	width: 94%;
+	left: 3%;
 }
 section {
 	width: 100%;
@@ -416,7 +419,7 @@ a svg:hover #play {
 	}
 	li {
 		display: inline-block;
-		padding: 0 3%;
+		padding: 0 6%;
 		vertical-align: middle;
 	}
 	a {
@@ -466,9 +469,6 @@ a svg:hover #play {
 	#aboutNav a {
 		color: #262626;
 		text-transform: uppercase;
-	}
-	#aboutNav a:hover, #aboutNav a:active, #aboutNav a:focus {
-		border-bottom: solid #262626 1px;
 	}
 	#aboutNav .slash {
 		color: #262626;
