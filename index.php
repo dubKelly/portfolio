@@ -114,6 +114,7 @@ _____________________________________________________________________
 - animate link underline
 - create header || fix burger bug
 - finish about background
+	- *paralax & fixed h1
 - link contact form to landing page onFail
 - re-design contact section
 - slow scroll
@@ -121,7 +122,6 @@ _____________________________________________________________________
 - SEO
 - hit up dem robots
 - comments
-- *paralax & fixed h1 on about
 
 -->
 </head>
@@ -152,7 +152,9 @@ $newToken = generateFormToken('form1');
 	</div>
 	<div id="mainNav" class="nav">
 		<ul>
-			<li><a href="#about" tabindex="-1">About</a></li>
+			<div class="underContainer">
+				<li class="underline"><a href="#about" tabindex="-1">About</a></li>
+			</div>
 			<li class="slash">/</li>
 			<li><a href="#work" tabindex="-1">Work</a></li>
 			<li class="slash">/</li>

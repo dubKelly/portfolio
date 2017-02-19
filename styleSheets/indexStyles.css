@@ -125,8 +125,26 @@ a {
 	color: #c4351f;
 	outline: none;
 }
-a:hover, a:active, a:focus {
+/*a:hover, a:active, a:focus {
 	border-bottom: solid white 1px;
+}*/
+.underContainer {
+	position: relative;
+	display: inline-block;
+}
+.underline::after {
+	position: absolute;
+	top: 110%;
+	left: 50%;
+	content: "";
+	height: 1px;
+	width: 0px;
+	background-color: white;
+	-webkit-transition: all 0.15s ease-in-out; 
+}
+.underline:hover::after {
+	width: 98%;
+	left: 0;
 }
 section {
 	width: 100%;
