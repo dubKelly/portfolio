@@ -146,8 +146,8 @@ a {
 	background-color: #262626;
 }
 .underline:hover::after {
-	width: 94%;
-	left: 3%;
+	width: 95%;
+	left: 2%;
 }
 section {
 	width: 100%;
@@ -225,6 +225,26 @@ span.deltaXi {
 	width: 100%;
 	height: 75%;
 	position: relative;
+	-webkit-animation: fadein 2s;
+	-moz-animation: fadein 2s;
+	-o-animation: fadein 2s;
+	animation: fadein 2s;
+}
+@-webkit-keyframes fadein {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+@-moz-keyframes fadein {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+@-o-keyframes fadein {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+@keyframes fadein {
+	from { opacity: 0; }
+	to { opacity: 1; }
 }
 .nav {
 	display: none;
@@ -416,8 +436,26 @@ a svg:hover #play {
 		position: relative;
 		height: 25%;
 		width: 100%;
+		animation: slide 1.3s ease-in;
+	}
+	@-webkit-keyframes slide {
+		from { opacity: 0; }
+		to { opacity: 1; }
+	}
+	@-moz-keyframes slide {
+		from { opacity: 0; }
+		to { opacity: 1; }
+	}
+	@-o-keyframes slide {
+		from { opacity: 0; }
+		to { opacity: 1; }
+	}
+	@keyframes slide {
+		from { opacity: 0; }
+		to { opacity: 1; }
 	}
 	li {
+		position: relative;
 		display: inline-block;
 		padding: 0 6%;
 		vertical-align: middle;
@@ -439,9 +477,16 @@ a svg:hover #play {
 		color: #424242;
 	}
 	#about {
-		height: 351px;
 		background-image: url("../images/about695.jpg");
+		background-attachment: fixed;
 		background-size: 100% auto;
+	}
+	#portrait {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
 	}
 	#blurb {
 		position: absolute;
@@ -482,11 +527,11 @@ a svg:hover #play {
 	#mLand {
 		display: none;
 	}
-	#about {
+	/*#about {
 		height: 475px;
 		background-image: url("../images/aboutLrg.jpg");
 		background-size: 100% auto;
-	}
+	}*/
 	#aHead {
 		font-size: 14rem;
 	}
@@ -508,13 +553,13 @@ a svg:hover #play {
 		width: 55%;
 		left: 4%;
 	}
-	#about {
+	/*#about {
 		height: 655px;
 		background-image: url("../images/about930.jpg");
 		background-size: 100% auto;
-	}
+	}*/
 @media only screen and (min-width: 2000px) {
-	#about {
+	/*#about {
 		background-image: url("../images/deskAbout.jpg");
-	}
+	}*/
 }
