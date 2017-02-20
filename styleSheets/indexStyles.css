@@ -477,15 +477,16 @@ a svg:hover #play {
 		color: #424242;
 	}
 	#about {
-		background-image: url("../images/about695.jpg");
+		background-image: url("../images/portLrg.jpg");
 		background-attachment: fixed;
 		background-size: 100% auto;
+		background-position: right top;
+		max-height: 500px;
 	}
 	#portrait {
 		position: fixed;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+		top: 0;
+		right: 0;
 		width: 100%;
 	}
 	#blurb {

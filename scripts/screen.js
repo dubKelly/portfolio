@@ -1,12 +1,13 @@
 function ratio() {
 	var x = window.innerWidth;
 	var y = window.innerHeight;
-	var z = document.getElementById("about");
-	if (x > y) {
-		z.style.backgroundSize = "100% auto";
+	var z = x / y;
+	var screen = document.getElementById("about");
+	if (z > 1.5) {
+		screen.style.backgroundSize = "100% auto";
 	}
 	else {
-		z.style.backgroundSize = "auto 100%";
+		screen.style.backgroundSize = "auto 100%";
 	}
 }
 window.onload = function() {
