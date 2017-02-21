@@ -171,7 +171,7 @@ $newToken = generateFormToken('form1');
 		<span class="span3"></span>
 		<span class="span4"></span>
 	</div>
-	<!--<img id="portrait" src="images/aboutLrg.jpg">-->
+	<img id="portrait" src="images/portLrg.jpg">
 	<div id="blurb">
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

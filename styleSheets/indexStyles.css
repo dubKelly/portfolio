@@ -176,9 +176,11 @@ section {
 	min-height: 420px;
 }
 footer {
+	position: relative;
 	height: 160px;
 	width: 100%;
 	background-color: #262626;
+	z-index: 8;
 }
 span {
 	display: block;
@@ -477,10 +479,10 @@ a svg:hover #play {
 		color: #424242;
 	}
 	#about {
-		background-image: url("../images/portLrg.jpg");
+		/*background-image: url("../images/portLrg.jpg");
 		background-attachment: fixed;
 		background-size: 100% auto;
-		background-position: right top;
+		background-position: right top;*/
 		max-height: 500px;
 	}
 	#portrait {
@@ -488,6 +490,8 @@ a svg:hover #play {
 		top: 0;
 		right: 0;
 		width: 100%;
+		height: auto;
+		z-index: -1;
 	}
 	#blurb {
 		position: absolute;
